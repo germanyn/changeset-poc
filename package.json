@@ -15,5 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.29.7"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

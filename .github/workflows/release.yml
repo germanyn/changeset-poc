@@ -60,3 +60,4 @@ jobs:
 
           # 3) Publish to npm
           pnpm release
+          git push

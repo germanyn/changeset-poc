@@ -11,6 +11,9 @@
     "version-packages": "changeset version",
     "release": "pnpm build && pnpm publish -r"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

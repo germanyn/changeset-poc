@@ -55,7 +55,7 @@ jobs:
           if [[ -n "$(git status --porcelain)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git commit -am "chore: release"
+            git commit -am "chore: release [skip ci]"
           fi
 
           # 3) Publish to npm

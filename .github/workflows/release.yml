@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+env:
+  CI: true
 
 jobs:
   release:
@@ -38,6 +40,9 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          createGithubReleases: false
           publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

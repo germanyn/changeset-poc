@@ -1,5 +1,11 @@
 # @germanyn/lib-b
 
+## 0.0.6
+
+### Patch Changes
+
+- 499a725: Add logging changeset
+
 ## 0.0.5
 
 ### Patch Changes

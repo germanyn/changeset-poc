@@ -9,7 +9,7 @@
     "test": "pnpm -r test",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm publish -r"
+    "release": "pnpm publish -r --provenance --access public"
   },
   "workspaces": [
     "packages/*"

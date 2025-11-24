@@ -17,6 +17,10 @@
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/germanyn/changeset-poc"
+  },
   "files": [
     "dist",
     "package.json"

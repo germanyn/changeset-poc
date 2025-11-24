@@ -14,10 +14,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/germanyn/changeset-poc"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",

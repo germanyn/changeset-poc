@@ -35,15 +35,27 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      
+      - name: Update packages
+        run: 
 
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          commit: "chore: update versions"
-          title: "chore: update versions"
-          createGithubReleases: false
-          publish: pnpm release
+      - name: Build packages
+        run: pnpm build
+
+      - name: Create versions & publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          # 1) Bump versions & changelogs based on changesets
+          pnpm version-packages
+
+          # 2) Commit version bumps and changelog changes
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit -am "chore: release"
+          fi
+
+          # 3) Publish to npm
+          pnpm release

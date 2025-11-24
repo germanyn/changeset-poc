@@ -1,5 +1,11 @@
 # @germanyn/lib-b
 
+## 0.0.4
+
+### Patch Changes
+
+- 37b0f7b: Remove logging
+
 ## 0.0.3
 
 ### Patch Changes

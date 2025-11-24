@@ -9,11 +9,15 @@
     "test": "pnpm -r test",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm publish -r --provenance --access public"
+    "release": "pnpm publish -r"
   },
   "workspaces": [
     "packages/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/germanyn/changeset-poc"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

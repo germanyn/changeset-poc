@@ -1,5 +1,11 @@
 # @germanyn/lib-a
 
+## 0.0.5
+
+### Patch Changes
+
+- a075776: Add changelog
+
 ## 0.0.4
 
 ### Patch Changes
